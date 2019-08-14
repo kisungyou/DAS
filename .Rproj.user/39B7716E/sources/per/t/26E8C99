@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1565726830854.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2521026641",
+    "id" : "26E8C99",
+    "lastKnownWriteTime" : 1565727089,
+    "last_content_update" : 1565727089681,
+    "path" : "~/Desktop/DAS/R/auxiliary.R",
+    "project_path" : "R/auxiliary.R",
+    "properties" : {
+        "cursorPosition" : "6,11",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
