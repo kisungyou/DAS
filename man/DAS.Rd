@@ -6,5 +6,5 @@
 \alias{DAS-package}
 \title{Distanced-bAsed Statistical methods}
 \description{
-Distanced-bAsed Statistical methods
+dd
 }
