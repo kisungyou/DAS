@@ -37,7 +37,7 @@ dat2 <- matrix(rnorm(50, mean=-1), ncol=2) # group 2 : 25 obs of mean -1
 dmat <- as.matrix(dist(rbind(dat1, dat2)))  # Euclidean distance matrix
 lab  <- c(rep(1,30), rep(2,25))             # corresponding label
 
-testk.mdf(dmat, lab)                         # run the code !
+testk.mdf(dmat, lab)                        # run the code !
 
 \dontrun{
 ## WARNING: computationally heavy. 

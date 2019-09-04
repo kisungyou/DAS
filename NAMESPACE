@@ -3,6 +3,7 @@
 export(mds)
 export(test2.2014bg)
 export(testk.mdf)
+export(testk.ssd)
 import(Rdpack)
 importFrom(Rcpp,evalCpp)
 importFrom(energy,eqdist.etest)

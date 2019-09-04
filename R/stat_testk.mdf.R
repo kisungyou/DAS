@@ -65,7 +65,7 @@ testk.mdf <- function(x, label, mc.iter=999){
   D2 = (x^2)          # now squared matrix
   N  = nrow(D2)
   if (length(label)!=N){
-    stop("* test.mdf : length of 'label' vector should equal to the number of observations.")
+    stop("* testk.mdf : length of 'label' vector should equal to the number of observations.")
   }
   
   ##################################################
