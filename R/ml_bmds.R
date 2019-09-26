@@ -22,6 +22,10 @@
 #' plot(cx, col=icol,pch=19,main=mc)
 #' plot(bx, col=icol,pch=19,main=mb)
 #' 
+#' @author Kisung You
+#' @references 
+#' \insertRef{oh_bayesian_2001}{DAS}
+#' 
 #' @export
 bmds <- function(x, ndim=2, par.a=5, par.alpha=0.5, par.step=1, mc.iter=8128, verbose=FALSE){
   ######################################################

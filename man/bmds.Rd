@@ -33,3 +33,9 @@ plot(cx, col=icol,pch=19,main=mc)
 plot(bx, col=icol,pch=19,main=mb)
 
 }
+\references{
+\insertRef{oh_bayesian_2001}{DAS}
+}
+\author{
+Kisung You
+}

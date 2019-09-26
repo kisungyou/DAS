@@ -155,7 +155,7 @@ arma::rowvec update_xvec(arma::mat D, arma::mat X, int id, double sigma2, double
   } else {
     return(xold.t());
   }
-}
+} 
 
 // Auxiliary Function : 'stress'
 // https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Multidimensional_Scaling.pdf
@@ -193,10 +193,11 @@ Rcpp::List main_bmds(arma::mat D, arma::mat X0, double sigg0,
   // 2) setup 
   arma::mat Xold = crotX(X0); // X will not be recorded, just use 
   arma::mat Xnew(N,p,fill::zeros); 
-  arma::cube Xstack(N,p,maxiter,fill::zeros);
+  arma::mat Xsol = Xold;
   
   double SSRnew = 0.0;
   double SSRold = compute_SSR_xmat(D, Xold);
+  double SSRsol = SSRold;
   
   arma::mat Sold(p,p,fill::zeros);
   double sigma2 = sigg0;
@@ -252,29 +253,19 @@ Rcpp::List main_bmds(arma::mat D, arma::mat X0, double sigg0,
     
 
     // 3-4. update correspondingly
+    if (SSRnew < SSRsol){ // running record of the best solution
+      SSRsol = SSRnew;
+      Xsol   = Xnew;
+    }
     SSRold = SSRnew;
     Xold   = Xnew;
-    Xstack.slice(i) = Xold;  // do I need to keep everything..?
-    
+
     // 3-5. report the update
     if (verbose==true){
       Rcpp::Rcout << "** bmds : iteration " << i+1 << "/" << maxiter << " complete." << std::endl;
     }
   }
   
-  // 5) select the best Xstack
-  arma::mat solX = Xstack.slice(0);
-  double  solSSR = compute_SSR_xmat(D, solX);
-  double theval  = 0.0;
-  for (int i=1;i<maxiter;i++){
-    theval = compute_SSR_xmat(D, Xstack.slice(i));
-    if (theval < solSSR){
-      solSSR = theval;
-      solX   = Xstack.slice(i);
-    }
-  }
-
-  
   // 4) return
-  return Rcpp::List::create(Rcpp::Named("solX")=solX);
+  return Rcpp::List::create(Rcpp::Named("solX")=Xsol);
 }

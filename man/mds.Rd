@@ -9,3 +9,9 @@ mds(x, ndim = 2)
 \description{
 Classical Multidimensional Scaling
 }
+\references{
+\insertRef{kruskal_multidimensional_1964}{DAS}
+}
+\author{
+Kisung You
+}

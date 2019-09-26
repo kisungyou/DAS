@@ -1,6 +1,10 @@
 #' Classical Multidimensional Scaling
 #' 
 #' 
+#' @author Kisung You
+#' @references 
+#' \insertRef{kruskal_multidimensional_1964}{DAS}
+#' 
 #' @export
 mds <- function(x, ndim=2){
   ##################################################3
