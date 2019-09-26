@@ -2,12 +2,17 @@
 #' 
 #' 
 #' @export
-mds <- function(x, k=2){
+mds <- function(x, ndim=2){
   ##################################################3
   # Check Input and Transform
+  ndim = round(ndim)
+  k  = as.integer(ndim)
   x  = check_input(x)
   D2 = (x^2)          # now squared matrix
   n  = nrow(D2)
+  if ((length(ndim)>1)||(ndim<1)||(ndim>=nrow(x))){
+    stop("* DAS::mds - 'ndim' should be an integer in [1,nrow(x)). ")
+  }
   
   ##################################################3
   # Computation
@@ -18,6 +23,11 @@ mds <- function(x, k=2){
   LL = eigB$values[1:k]
   EE = eigB$vectors[,1:k]
   
-  Y  = EE%*%diag(sqrt(LL))
-  return(Y)
+  Y  = as.matrix(base::scale((EE%*%diag(sqrt(LL))), center=TRUE, scale=FALSE))
+  DY = as.matrix(stats::dist(Y))
+  
+  output = list()
+  output$embed  = Y
+  output$stress = compute_stress(x, DY)
+  return(output)
 }

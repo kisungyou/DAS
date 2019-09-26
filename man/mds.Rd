@@ -4,7 +4,7 @@
 \alias{mds}
 \title{Classical Multidimensional Scaling}
 \usage{
-mds(x, k = 2)
+mds(x, ndim = 2)
 }
 \description{
 Classical Multidimensional Scaling

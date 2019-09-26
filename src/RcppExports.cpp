@@ -6,6 +6,61 @@
 
 using namespace Rcpp;
 
+// compute_SSR
+double compute_SSR(arma::mat& D, arma::mat& Delta);
+RcppExport SEXP _DAS_compute_SSR(SEXP DSEXP, SEXP DeltaSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat& >::type D(DSEXP);
+    Rcpp::traits::input_parameter< arma::mat& >::type Delta(DeltaSEXP);
+    rcpp_result_gen = Rcpp::wrap(compute_SSR(D, Delta));
+    return rcpp_result_gen;
+END_RCPP
+}
+// compute_stress
+double compute_stress(arma::mat& D, arma::mat& Dhat);
+RcppExport SEXP _DAS_compute_stress(SEXP DSEXP, SEXP DhatSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat& >::type D(DSEXP);
+    Rcpp::traits::input_parameter< arma::mat& >::type Dhat(DhatSEXP);
+    rcpp_result_gen = Rcpp::wrap(compute_stress(D, Dhat));
+    return rcpp_result_gen;
+END_RCPP
+}
+// main_bmds
+Rcpp::List main_bmds(arma::mat D, arma::mat X0, double sigg0, double a, double alpha, int maxiter, double constant, bool verbose, arma::vec betas);
+RcppExport SEXP _DAS_main_bmds(SEXP DSEXP, SEXP X0SEXP, SEXP sigg0SEXP, SEXP aSEXP, SEXP alphaSEXP, SEXP maxiterSEXP, SEXP constantSEXP, SEXP verboseSEXP, SEXP betasSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type D(DSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type X0(X0SEXP);
+    Rcpp::traits::input_parameter< double >::type sigg0(sigg0SEXP);
+    Rcpp::traits::input_parameter< double >::type a(aSEXP);
+    Rcpp::traits::input_parameter< double >::type alpha(alphaSEXP);
+    Rcpp::traits::input_parameter< int >::type maxiter(maxiterSEXP);
+    Rcpp::traits::input_parameter< double >::type constant(constantSEXP);
+    Rcpp::traits::input_parameter< bool >::type verbose(verboseSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type betas(betasSEXP);
+    rcpp_result_gen = Rcpp::wrap(main_bmds(D, X0, sigg0, a, alpha, maxiter, constant, verbose, betas));
+    return rcpp_result_gen;
+END_RCPP
+}
+// my_invgamma
+double my_invgamma(double alpha, double beta);
+RcppExport SEXP _DAS_my_invgamma(SEXP alphaSEXP, SEXP betaSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type alpha(alphaSEXP);
+    Rcpp::traits::input_parameter< double >::type beta(betaSEXP);
+    rcpp_result_gen = Rcpp::wrap(my_invgamma(alpha, beta));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpparma_hello_world
 arma::mat rcpparma_hello_world();
 RcppExport SEXP _DAS_rcpparma_hello_world() {
@@ -51,6 +106,10 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_DAS_compute_SSR", (DL_FUNC) &_DAS_compute_SSR, 2},
+    {"_DAS_compute_stress", (DL_FUNC) &_DAS_compute_stress, 2},
+    {"_DAS_main_bmds", (DL_FUNC) &_DAS_main_bmds, 9},
+    {"_DAS_my_invgamma", (DL_FUNC) &_DAS_my_invgamma, 2},
     {"_DAS_rcpparma_hello_world", (DL_FUNC) &_DAS_rcpparma_hello_world, 0},
     {"_DAS_rcpparma_outerproduct", (DL_FUNC) &_DAS_rcpparma_outerproduct, 1},
     {"_DAS_rcpparma_innerproduct", (DL_FUNC) &_DAS_rcpparma_innerproduct, 1},
