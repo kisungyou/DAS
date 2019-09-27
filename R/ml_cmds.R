@@ -3,10 +3,10 @@
 #' 
 #' @author Kisung You
 #' @references 
-#' \insertRef{kruskal_multidimensional_1964}{DAS}
+#' \insertRef{torgerson_multidimensional_1952}{DAS}
 #' 
 #' @export
-mds <- function(x, ndim=2){
+cmds <- function(x, ndim=2){
   ##################################################3
   # Check Input and Transform
   ndim = round(ndim)
@@ -15,7 +15,7 @@ mds <- function(x, ndim=2){
   D2 = (x^2)          # now squared matrix
   n  = nrow(D2)
   if ((length(ndim)>1)||(ndim<1)||(ndim>=nrow(x))){
-    stop("* DAS::mds - 'ndim' should be an integer in [1,nrow(x)). ")
+    stop("* DAS::cmds - 'ndim' should be an integer in [1,nrow(x)). ")
   }
   
   ##################################################3

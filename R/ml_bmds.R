@@ -7,7 +7,7 @@
 #' 
 #' ## run Bayesian MDS
 #' #  let's run 49 iterations (CRAN) quietly
-#' iris.cmds =  mds(dmat, ndim=2)
+#' iris.cmds = cmds(dmat, ndim=2)
 #' iris.bmds = bmds(dmat, ndim=2, mc.iter=49, par.step=(2.38^2)) 
 #' 
 #' ## extract coordinates and class information
@@ -23,6 +23,7 @@
 #' plot(bx, col=icol,pch=19,main=mb)
 #' 
 #' @author Kisung You
+#' 
 #' @references 
 #' \insertRef{oh_bayesian_2001}{DAS}
 #' 
@@ -34,7 +35,7 @@ bmds <- function(x, ndim=2, par.a=5, par.alpha=0.5, par.step=1, mc.iter=8128, ve
   ndim = round(ndim)
 
   if ((length(ndim)>1)||(ndim<1)||(ndim>=nrow(x))){
-    stop("* DAS::mds - 'ndim' should be an integer in [1,nrow(x)). ")
+    stop("* DAS::bmds - 'ndim' should be an integer in [1,nrow(x)). ")
   }
   
   n = nrow(x)
@@ -43,7 +44,7 @@ bmds <- function(x, ndim=2, par.a=5, par.alpha=0.5, par.step=1, mc.iter=8128, ve
   ######################################################
   # Preliminary Computation
   # 1. apply CMDS for initialization
-  y     = as.matrix(base::scale(mds(x, ndim)$embed, # (N x ndim) centered 
+  y     = as.matrix(base::scale(cmds(x, ndim)$embed, # (N x ndim) centered 
                                 center=TRUE, scale=FALSE)) 
   Delta = as.matrix(stats::dist(y))           # (N x N) pairwise distances
   

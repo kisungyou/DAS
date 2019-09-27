@@ -17,7 +17,7 @@ dmat = as.matrix(stats::dist(iris[,1:4]))
 
 ## run Bayesian MDS
 #  let's run 49 iterations (CRAN) quietly
-iris.cmds =  mds(dmat, ndim=2)
+iris.cmds = cmds(dmat, ndim=2)
 iris.bmds = bmds(dmat, ndim=2, mc.iter=49, par.step=(2.38^2)) 
 
 ## extract coordinates and class information
