@@ -9,6 +9,28 @@ cmds(x, ndim = 2)
 \description{
 Classical Multidimensional Scaling
 }
+\examples{
+## use simple example of iris dataset 
+data(iris) 
+dat  = iris[,1:4]
+dat.n = nrow(dat)
+dat.p = ncol(dat)
+dat  = dat + matrix(rnorm(dat.n*dat.p, sd=0.1), ncol=dat.p)
+dmat = as.matrix(stats::dist(dat)) # distance matrix
+
+## run the algorithm
+iris.cmds = cmds(dmat, ndim=2)
+
+## extract coordinates and class information
+cx = iris.cmds$embed # embedded coordinates of CMDS
+icol = iris[,5]      # class information
+
+## visualize
+par(pty="s")
+mc = paste("CMDS with STRESS=",round(iris.cmds$stress,4),sep="")
+plot(cx, col=icol,pch=19,main=mc)
+
+}
 \references{
 \insertRef{torgerson_multidimensional_1952}{DAS}
 }

@@ -4,7 +4,7 @@
 \name{DAS}
 \alias{DAS}
 \alias{DAS-package}
-\title{Distanced-bAsed Statistical methods}
+\title{Distance-bAsed Statistical methods}
 \description{
 dd
 }

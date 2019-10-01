@@ -1,4 +1,4 @@
-#' sum of squared distances
+#' Sum of Squared Distances
 #' 
 #' 
 #' 
@@ -32,9 +32,9 @@
 #' for (i in 1:100){
 #'    errors[i] = sum(pvals<=alphas[i])/niter
 #' }
-#' plot(alphas, errors, "b", main="Empirical Type 1 Errors", 
-#'      xlab="alpha", ylab="error", lwd=2)
-#' abline(v=0.05, lwd=2, col="red")
+#' plot(alphas, errors, main="Empirical Type 1 Errors", 
+#'      xlab="alpha", ylab="error", pch=19)
+#' abline(a=0, b=1, lwd=4, col="red")
 #' }
 #' 
 #' @export

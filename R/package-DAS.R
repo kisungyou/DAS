@@ -1,4 +1,4 @@
-#' Distanced-bAsed Statistical methods
+#' Distance-bAsed Statistical methods
 #' 
 #' dd
 #'
@@ -6,7 +6,7 @@
 #' @name DAS
 #' @aliases DAS-package
 #' @import Rdpack
-#' @importFrom stats dist
+#' @importFrom stats dist hclust
 #' @importFrom energy eqdist.etest
 #' @importFrom Rcpp evalCpp
 #' @useDynLib DAS
