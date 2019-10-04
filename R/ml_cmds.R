@@ -50,7 +50,8 @@ cmds <- function(x, ndim=2){
   LL = eigB$values[1:k]
   EE = eigB$vectors[,1:k]
   
-  Y  = as.matrix(base::scale((EE%*%diag(sqrt(LL))), center=TRUE, scale=FALSE))
+  # Y  = as.matrix(base::scale((EE%*%diag(sqrt(LL))), center=TRUE, scale=FALSE))
+  Y  = EE%*%diag(sqrt(LL))
   DY = as.matrix(stats::dist(Y))
   
   output = list()

@@ -49,6 +49,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// emds_gamma0
+double emds_gamma0(arma::mat dmat);
+RcppExport SEXP _DAS_emds_gamma0(SEXP dmatSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type dmat(dmatSEXP);
+    rcpp_result_gen = Rcpp::wrap(emds_gamma0(dmat));
+    return rcpp_result_gen;
+END_RCPP
+}
 // my_invgamma
 double my_invgamma(double alpha, double beta);
 RcppExport SEXP _DAS_my_invgamma(SEXP alphaSEXP, SEXP betaSEXP) {
@@ -61,59 +72,13 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_hello_world
-arma::mat rcpparma_hello_world();
-RcppExport SEXP _DAS_rcpparma_hello_world() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_outerproduct
-arma::mat rcpparma_outerproduct(const arma::colvec& x);
-RcppExport SEXP _DAS_rcpparma_outerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_innerproduct
-double rcpparma_innerproduct(const arma::colvec& x);
-RcppExport SEXP _DAS_rcpparma_innerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_bothproducts
-Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
-RcppExport SEXP _DAS_rcpparma_bothproducts(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_DAS_compute_SSR", (DL_FUNC) &_DAS_compute_SSR, 2},
     {"_DAS_compute_stress", (DL_FUNC) &_DAS_compute_stress, 2},
     {"_DAS_main_bmds", (DL_FUNC) &_DAS_main_bmds, 9},
+    {"_DAS_emds_gamma0", (DL_FUNC) &_DAS_emds_gamma0, 1},
     {"_DAS_my_invgamma", (DL_FUNC) &_DAS_my_invgamma, 2},
-    {"_DAS_rcpparma_hello_world", (DL_FUNC) &_DAS_rcpparma_hello_world, 0},
-    {"_DAS_rcpparma_outerproduct", (DL_FUNC) &_DAS_rcpparma_outerproduct, 1},
-    {"_DAS_rcpparma_innerproduct", (DL_FUNC) &_DAS_rcpparma_innerproduct, 1},
-    {"_DAS_rcpparma_bothproducts", (DL_FUNC) &_DAS_rcpparma_bothproducts, 1},
     {NULL, NULL, 0}
 };
 

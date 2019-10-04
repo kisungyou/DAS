@@ -13,23 +13,11 @@ main_bmds <- function(D, X0, sigg0, a, alpha, maxiter, constant, verbose, betas)
     .Call('_DAS_main_bmds', PACKAGE = 'DAS', D, X0, sigg0, a, alpha, maxiter, constant, verbose, betas)
 }
 
+emds_gamma0 <- function(dmat) {
+    .Call('_DAS_emds_gamma0', PACKAGE = 'DAS', dmat)
+}
+
 my_invgamma <- function(alpha, beta) {
     .Call('_DAS_my_invgamma', PACKAGE = 'DAS', alpha, beta)
-}
-
-rcpparma_hello_world <- function() {
-    .Call('_DAS_rcpparma_hello_world', PACKAGE = 'DAS')
-}
-
-rcpparma_outerproduct <- function(x) {
-    .Call('_DAS_rcpparma_outerproduct', PACKAGE = 'DAS', x)
-}
-
-rcpparma_innerproduct <- function(x) {
-    .Call('_DAS_rcpparma_innerproduct', PACKAGE = 'DAS', x)
-}
-
-rcpparma_bothproducts <- function(x) {
-    .Call('_DAS_rcpparma_bothproducts', PACKAGE = 'DAS', x)
 }
 
