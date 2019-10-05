@@ -2,6 +2,7 @@
 
 export(bmds)
 export(cmds)
+export(coupling)
 export(emds)
 export(nef)
 export(nem)
@@ -14,4 +15,5 @@ importFrom(energy,eqdist.etest)
 importFrom(labdsv,euclidify)
 importFrom(stats,dist)
 importFrom(stats,hclust)
+importFrom(transport,transport)
 useDynLib(DAS)

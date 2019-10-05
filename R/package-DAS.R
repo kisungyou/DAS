@@ -8,6 +8,7 @@
 #' @import Rdpack
 #' @importFrom labdsv euclidify
 #' @importFrom stats dist hclust
+#' @importFrom transport transport
 #' @importFrom energy eqdist.etest
 #' @importFrom Rcpp evalCpp
 #' @useDynLib DAS
