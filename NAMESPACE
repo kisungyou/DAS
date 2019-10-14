@@ -3,6 +3,7 @@
 export(bmds)
 export(cmds)
 export(coupling)
+export(cvindex)
 export(emds)
 export(nef)
 export(nem)
