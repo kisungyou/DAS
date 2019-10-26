@@ -2,43 +2,115 @@
     {
         "definitions" : [
             {
-                "column" : 11,
-                "file" : "/home/kisung/Desktop/DAS/src/rcpparma_hello_world.cpp",
+                "column" : 8,
+                "file" : "/home/kisung/Desktop/DAS/src/cpp_BMDS2001.cpp",
                 "kind" : 6,
-                "line" : 18,
-                "name" : "rcpparma_hello_world",
+                "line" : 11,
+                "name" : "compute_SSR(arma::mat &, arma::mat &)",
                 "parent_name" : "",
-                "usr" : "c:@F@rcpparma_hello_world#"
-            },
-            {
-                "column" : 11,
-                "file" : "/home/kisung/Desktop/DAS/src/rcpparma_hello_world.cpp",
-                "kind" : 6,
-                "line" : 30,
-                "name" : "rcpparma_outerproduct(const arma::colvec &)",
-                "parent_name" : "",
-                "usr" : "c:@F@rcpparma_outerproduct#&1$@N@arma@C@Col>#d#"
+                "usr" : "c:@F@compute_SSR#&$@N@arma@C@Mat>#d#S0_#"
             },
             {
                 "column" : 8,
-                "file" : "/home/kisung/Desktop/DAS/src/rcpparma_hello_world.cpp",
+                "file" : "/home/kisung/Desktop/DAS/src/cpp_BMDS2001.cpp",
                 "kind" : 6,
-                "line" : 38,
-                "name" : "rcpparma_innerproduct(const arma::colvec &)",
+                "line" : 27,
+                "name" : "compute_SSR_xmat(arma::mat &, arma::mat &)",
                 "parent_name" : "",
-                "usr" : "c:@F@rcpparma_innerproduct#&1$@N@arma@C@Col>#d#"
+                "usr" : "c:@F@compute_SSR_xmat#&$@N@arma@C@Mat>#d#S0_#"
+            },
+            {
+                "column" : 11,
+                "file" : "/home/kisung/Desktop/DAS/src/cpp_BMDS2001.cpp",
+                "kind" : 6,
+                "line" : 50,
+                "name" : "compute_pdmat(arma::mat &)",
+                "parent_name" : "",
+                "usr" : "c:@F@compute_pdmat#&$@N@arma@C@Mat>#d#"
+            },
+            {
+                "column" : 11,
+                "file" : "/home/kisung/Desktop/DAS/src/cpp_BMDS2001.cpp",
+                "kind" : 6,
+                "line" : 69,
+                "name" : "crotX(arma::mat &)",
+                "parent_name" : "",
+                "usr" : "c:@F@crotX#&$@N@arma@C@Mat>#d#"
+            },
+            {
+                "column" : 14,
+                "file" : "/home/kisung/Desktop/DAS/src/cpp_BMDS2001.cpp",
+                "kind" : 6,
+                "line" : 89,
+                "name" : "update_xvec(arma::mat, arma::mat, int, double, double, arma::mat)",
+                "parent_name" : "",
+                "usr" : "c:@F@update_xvec#$@N@arma@C@Mat>#d#S0_#I#d#d#S0_#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/kisung/Desktop/DAS/src/cpp_BMDS2001.cpp",
+                "kind" : 6,
+                "line" : 163,
+                "name" : "compute_stress(arma::mat &, arma::mat &)",
+                "parent_name" : "",
+                "usr" : "c:@F@compute_stress#&$@N@arma@C@Mat>#d#S0_#"
             },
             {
                 "column" : 12,
-                "file" : "/home/kisung/Desktop/DAS/src/rcpparma_hello_world.cpp",
+                "file" : "/home/kisung/Desktop/DAS/src/cpp_BMDS2001.cpp",
                 "kind" : 6,
-                "line" : 47,
-                "name" : "rcpparma_bothproducts(const arma::colvec &)",
+                "line" : 184,
+                "name" : "main_bmds(arma::mat, arma::mat, double, double, double, int, double, bool, arma::vec)",
                 "parent_name" : "",
-                "usr" : "c:@F@rcpparma_bothproducts#&1$@N@arma@C@Col>#d#"
+                "usr" : "c:@F@main_bmds#$@N@arma@C@Mat>#d#S0_#d#d#d#I#d#b#$@N@arma@C@Col>#d#"
             }
         ],
-        "file" : "/home/kisung/Desktop/DAS/src/rcpparma_hello_world.cpp",
-        "file_last_write" : 1565726754
+        "file" : "/home/kisung/Desktop/DAS/src/cpp_BMDS2001.cpp",
+        "file_last_write" : 1572056783
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 8,
+                "file" : "/home/kisung/Desktop/DAS/src/cpp_EMDS.cpp",
+                "kind" : 6,
+                "line" : 9,
+                "name" : "emds_gamma0(arma::mat)",
+                "parent_name" : "",
+                "usr" : "c:@F@emds_gamma0#$@N@arma@C@Mat>#d#"
+            }
+        ],
+        "file" : "/home/kisung/Desktop/DAS/src/cpp_EMDS.cpp",
+        "file_last_write" : 1572056783
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 8,
+                "file" : "/home/kisung/Desktop/DAS/src/extra_cpps.cpp",
+                "kind" : 6,
+                "line" : 11,
+                "name" : "my_invgamma(double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@my_invgamma#d#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/kisung/Desktop/DAS/src/extra_cpps.cpp",
+                "kind" : 6,
+                "line" : 16,
+                "name" : "my_dinvgamma(double, double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@my_dinvgamma#d#d#d#"
+            }
+        ],
+        "file" : "/home/kisung/Desktop/DAS/src/extra_cpps.cpp",
+        "file_last_write" : 1572056783
+    },
+    {
+        "definitions" : [
+        ],
+        "file" : "/home/kisung/Desktop/DAS/src/extra_cpps.h",
+        "file_last_write" : 1572056783
     }
 ]

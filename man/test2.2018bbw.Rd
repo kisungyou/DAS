@@ -25,9 +25,9 @@ test2.2018bbw(dmat, lab)                    # run the code !
 niter = 496  
 pvals = rep(0,niter)
 for (i in 1:niter){
-  dat = matrix(rnorm(200),ncol=2)
-  lab = c(rep(1,50), rep(2,50))
-  pvals[i] = test2.2014bg(as.matrix(dist(dat)), lab)$p.value
+  dat = matrix(rnorm(300),ncol=3)
+  lab = c(rep(1,60), rep(2,40))
+  pvals[i] = test2.2018bbw(as.matrix(dist(dat)), lab)$p.value
   print(paste("iteration ",i," complete..",sep=""))
 }
 print(paste("* Empirical Type 1 Error : ",sum(pvals<=0.05)/niter,sep=""))
@@ -40,7 +40,7 @@ for (i in 1:100){
 }
 plot(alphas, errors, "b", main="Empirical Type 1 Errors", 
      xlab="alpha", ylab="error", lwd=2)
-abline(v=0.05, lwd=2, col="red")
+abline(0,1, lwd=2, col="red")
 }
 
 }

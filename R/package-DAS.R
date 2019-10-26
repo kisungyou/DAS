@@ -7,7 +7,8 @@
 #' @aliases DAS-package
 #' @import Rdpack
 #' @importFrom labdsv euclidify
-#' @importFrom stats dist hclust ks.test
+#' @importFrom maotai distecdf
+#' @importFrom stats dist hclust ks.test ecdf
 #' @importFrom transport transport
 #' @importFrom energy eqdist.etest
 #' @importFrom Rcpp evalCpp
