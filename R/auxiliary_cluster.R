@@ -7,6 +7,7 @@
 # (12) rclust_Z             : membership matrix of size (n x q)
 # (13) rclust_index_density : use for SDbw method
 
+
 # (08) sum of distances ---------------------------------------------------
 #   rclust_index_Sw : within-cluster
 #   rclust_index_Sb : between-cluster sum of distances given a distance matrix
@@ -71,7 +72,7 @@ rclust_index_Ns <- function(label, memberlist){
 #' @keywords internal
 #' @noRd
 rclust_membership <- function(label){
-  ulabel = unique(label)
+  ulabel = sort(unique(label))
   memvec = list()
   for (i in 1:length(ulabel)){
     memvec[[i]] = which(label==ulabel[i])
