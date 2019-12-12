@@ -4,7 +4,7 @@
 \alias{ksets}
 \title{K-Sets Clustering Algorithm}
 \usage{
-ksets(x, k = 2, init = c("Random", "Medoids"), maxiter = 20)
+ksets(x, k = 2, init = c("Random", "Medoids"), maxiter = 20, label.init = NULL)
 }
 \description{
 sort of autotuning is happening..

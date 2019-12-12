@@ -4,8 +4,13 @@
 \alias{coupling}
 \title{optimal transport; returns p-Wasserstein distance}
 \usage{
-coupling(dxy, p = 1, wx, wy, method = c("networkflow", "shortsimplex",
-  "revsimplex", "primaldual"))
+coupling(
+  dxy,
+  p = 1,
+  wx,
+  wy,
+  method = c("networkflow", "shortsimplex", "revsimplex", "primaldual")
+)
 }
 \description{
 c(x,y) = dxy^p; ground cost/metric

@@ -6,7 +6,7 @@ Authors@R: c(person("Kisung", "You", role = c("aut", "cre"),email = "kyoustat@gm
 Description: More about what it does (maybe more than one line)
 License: GPL (>=3)
 Encoding: UTF-8
-Imports: Rcpp, Rdpack, Rtsne, cluster, energy, labdsv, maotai, mclustcomp, stats, transport
+Imports: Rcpp, Rdpack, Rtsne, cluster, energy, labdsv, mclustcomp, stats, transport
 LinkingTo: Rcpp, RcppArmadillo, RcppDist
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 RdMacros: Rdpack

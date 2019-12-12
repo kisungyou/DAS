@@ -4,7 +4,13 @@
 \alias{akmeans}
 \title{Approximate K-Means Clustering}
 \usage{
-akmeans(x, k = 2, init = c("Random", "Medoids"), maxiter = 20)
+akmeans(
+  x,
+  k = 2,
+  init = c("Random", "Medoids"),
+  maxiter = 20,
+  label.init = NULL
+)
 }
 \description{
 Approximate K-Means Clustering

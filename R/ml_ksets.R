@@ -7,7 +7,7 @@
 #' \insertRef{chang_mathematical_2016}{DAS}
 #' 
 #' @export
-ksets <- function(x, k=2, init=c("Random","Medoids"), maxiter=20){
+ksets <- function(x, k=2, init=c("Random","Medoids"), maxiter=20, label.init=NULL){
   ##################################################3
   # Check Input and Transform
   x  = check_input(x)
@@ -25,12 +25,18 @@ ksets <- function(x, k=2, init=c("Random","Medoids"), maxiter=20){
   
   ##################################################3
   # initialize
-  if (all(init=="random")){
-    labels = c(1:K, base::sample(1:K, n-K, replace=TRUE))
-    labels.old = base::sample(labels)
-  } else if (all(init=="medoids")){
-    labels.old = as.vector(cluster::pam(stats::as.dist(x), k=K)$clustering)
+  if ((length(label.init)==0)&&(is.null(label.init))){
+    if (all(init=="random")){
+      labels = c(1:K, base::sample(1:K, n-K, replace=TRUE))
+      labels.old = base::sample(labels)
+    } else if (all(init=="medoids")){
+      labels.old = as.vector(cluster::pam(stats::as.dist(x), k=K)$clustering)
+    }
+  } else {
+    labels.old = as.integer(as.factor(label.init))
   }
+  
+  
   
   ##################################################
   # iterate

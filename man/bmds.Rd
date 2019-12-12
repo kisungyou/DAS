@@ -4,8 +4,15 @@
 \alias{bmds}
 \title{Bayesian Multidimensional Scaling by Oh and Raftery (2001)}
 \usage{
-bmds(x, ndim = 2, par.a = 5, par.alpha = 0.5, par.step = 1,
-  mc.iter = 8128, verbose = FALSE)
+bmds(
+  x,
+  ndim = 2,
+  par.a = 5,
+  par.alpha = 0.5,
+  par.step = 1,
+  mc.iter = 8128,
+  verbose = FALSE
+)
 }
 \description{
 Bayesian Multidimensional Scaling by Oh and Raftery (2001)
