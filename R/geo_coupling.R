@@ -81,7 +81,7 @@ coupling <- function(dxy, p=1, wx, wy,
   
   ##################################################
   # Main Computation
-  if (is.infinite(p)){ # p=Inf
+  if (is.infinite(p)){ # p=Inf; this part is incorrect
     output = list()
     output$distance = max(dxy)
   } else {
